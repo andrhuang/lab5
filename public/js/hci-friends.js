@@ -5,11 +5,24 @@ $(document).ready(function() {
 	initializePage();
 })
 
+
 /*
  * Function that is called when the document is ready.
  */
+
+
 function initializePage() {
 	console.log("Javascript connected!");
+
+	$(".mynames").click(anagramit);
+}
+
+function anagramit(e) {
+   console.log("yoyo");
+   e.preventDefault();
+   var name = $(this).text();
+   var grammed = anagrammedName(name);
+   $(this).text(grammed);
 }
 
 function anagrammedName(name) {
